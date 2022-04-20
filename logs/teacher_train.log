@@ -1,0 +1,995 @@
+2022-04-20 00:25:59.849 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 00:25:59.850 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 00:25:59.850 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 00:25:59.851 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 00:25:59.851 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 00:25:59.851 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 00:25:59.851 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 00:25:59.851 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 00:25:59.854 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 00:25:59.854 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 00:25:59.854 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 00:25:59.854 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 00:25:59.854 | INFO     | utils.hyperParams:print_arguments:7 - num_epochs: 3
+2022-04-20 00:25:59.854 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 00:25:59.855 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 00:25:59.855 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 00:25:59.855 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 00:25:59.855 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 00:25:59.855 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 00:25:59.855 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 00:26:01.134 | INFO     | __main__:train:66 - 
+
+2022-04-20 00:26:01.135 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 00:26:01.135 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 00:26:01.135 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 00:26:01.135 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 00:26:01.135 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 00:26:01.135 | INFO     | __main__:train:74 - 
+
+2022-04-20 00:26:01.137 | INFO     | __main__:train:82 - 
+
+2022-04-20 00:26:03.122 | INFO     | __main__:train:96 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 00:26:19.034 | INFO     | __main__:train:96 - epoch:  0, step:   50, loss: 0.1686
+2022-04-20 00:26:34.985 | INFO     | __main__:train:96 - epoch:  0, step:  100, loss: 0.1296
+2022-04-20 00:26:54.754 | INFO     | __main__:train:99 - epoch:  0, valid_loss:    0, valid_acc: 87.0000
+2022-04-20 00:26:54.754 | INFO     | __main__:train:100 - best_result:    0
+2022-04-20 00:26:55.312 | INFO     | utils.tools:save_model:55 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 00:26:55.313 | INFO     | __main__:train:82 - 
+
+2022-04-20 00:26:55.638 | INFO     | __main__:train:96 - epoch:  1, step:    0, loss: 0.1971
+2022-04-20 00:27:11.686 | INFO     | __main__:train:96 - epoch:  1, step:   50, loss: 0.3988
+2022-04-20 00:27:27.766 | INFO     | __main__:train:96 - epoch:  1, step:  100, loss: 0.2529
+2022-04-20 00:27:47.678 | INFO     | __main__:train:99 - epoch:  1, valid_loss:    0, valid_acc: 92.2000
+2022-04-20 00:27:47.678 | INFO     | __main__:train:100 - best_result:    0
+2022-04-20 00:27:48.255 | INFO     | utils.tools:save_model:55 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 00:27:48.256 | INFO     | __main__:train:82 - 
+
+2022-04-20 00:27:48.582 | INFO     | __main__:train:96 - epoch:  2, step:    0, loss: 0.0070
+2022-04-20 00:28:04.765 | INFO     | __main__:train:96 - epoch:  2, step:   50, loss: 0.8152
+2022-04-20 00:28:21.143 | INFO     | __main__:train:96 - epoch:  2, step:  100, loss: 0.0331
+2022-04-20 00:28:41.183 | INFO     | __main__:train:99 - epoch:  2, valid_loss:    0, valid_acc: 92.5000
+2022-04-20 00:28:41.183 | INFO     | __main__:train:100 - best_result:    0
+2022-04-20 00:28:41.776 | INFO     | utils.tools:save_model:55 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 01:41:08.092 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 01:41:08.093 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 01:41:08.093 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 01:41:08.093 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 01:41:08.093 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ../bert-base-chinese
+2022-04-20 01:41:08.093 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ../data/hotel
+2022-04-20 01:41:08.093 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 01:41:08.094 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 01:41:08.094 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 01:41:08.094 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 01:41:08.094 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 01:41:08.094 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 01:41:08.094 | INFO     | utils.hyperParams:print_arguments:7 - num_epochs: 3
+2022-04-20 01:41:08.094 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 01:41:08.095 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 01:41:08.095 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 01:41:08.095 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 01:41:08.095 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 01:41:08.095 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 01:41:08.095 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 01:48:02.097 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 01:48:02.097 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 01:48:02.097 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 01:48:02.097 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 01:48:02.097 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ../bert-base-chinese
+2022-04-20 01:48:02.098 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ../data/hotel
+2022-04-20 01:48:02.098 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 01:48:02.098 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 01:48:02.098 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 01:48:02.098 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 01:48:02.098 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 01:48:02.098 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 01:48:02.099 | INFO     | utils.hyperParams:print_arguments:7 - num_epochs: 3
+2022-04-20 01:48:02.099 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 01:48:02.099 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 01:48:02.099 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 01:48:02.099 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 01:48:02.099 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 01:48:02.099 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 01:48:02.100 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 01:48:23.736 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 01:48:23.736 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 01:48:23.737 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 01:48:23.737 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 01:48:23.737 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ../bert-base-chinese
+2022-04-20 01:48:23.737 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ../data/hotel
+2022-04-20 01:48:23.737 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 01:48:23.737 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 01:48:23.737 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 01:48:23.738 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 01:48:23.738 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 01:48:23.738 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 01:48:23.738 | INFO     | utils.hyperParams:print_arguments:7 - num_epochs: 3
+2022-04-20 01:48:23.738 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 01:48:23.738 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 01:48:23.738 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 01:48:23.739 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 01:48:23.739 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 01:48:23.739 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 01:48:23.739 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 01:48:36.466 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 01:48:36.466 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 01:48:36.467 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 01:48:36.467 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 01:48:36.467 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 01:48:36.467 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 01:48:36.467 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 01:48:36.467 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 01:48:36.468 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 01:48:36.468 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 01:48:36.468 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 01:48:36.468 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 01:48:36.468 | INFO     | utils.hyperParams:print_arguments:7 - num_epochs: 3
+2022-04-20 01:48:36.468 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 01:48:36.468 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 01:48:36.469 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 01:48:36.469 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 01:48:36.469 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 01:48:36.469 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 01:48:36.469 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 01:48:37.888 | INFO     | __main__:train:66 - 
+
+2022-04-20 01:48:37.888 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 01:48:37.888 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 01:48:37.889 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 01:48:37.889 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 01:48:37.889 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 01:48:37.890 | INFO     | __main__:train:74 - 
+
+2022-04-20 01:48:37.891 | INFO     | __main__:train:82 - 
+
+2022-04-20 01:48:40.427 | INFO     | __main__:train:96 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 01:48:56.699 | INFO     | __main__:train:96 - epoch:  0, step:   50, loss: 0.1686
+2022-04-20 02:08:21.873 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 02:08:21.874 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 02:08:21.874 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 02:08:21.874 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 02:08:21.874 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 02:08:21.874 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 02:08:21.874 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 02:08:21.875 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 02:08:21.875 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 02:08:21.875 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 512
+2022-04-20 02:08:21.875 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 02:08:21.875 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 02:08:21.875 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 02:08:21.876 | INFO     | utils.hyperParams:print_arguments:7 - num_epochs: 3
+2022-04-20 02:08:21.876 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 02:08:21.876 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 02:08:21.876 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 02:08:21.876 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 02:08:21.876 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 02:08:21.876 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 02:08:21.876 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 02:08:23.269 | INFO     | __main__:train:66 - 
+
+2022-04-20 02:08:23.269 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 02:08:23.269 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 02:08:23.270 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 02:08:23.270 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 02:08:23.270 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 02:08:23.270 | INFO     | __main__:train:74 - 
+
+2022-04-20 02:08:23.271 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:08:53.091 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 02:08:53.091 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 02:08:53.091 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 02:08:53.091 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 02:08:53.092 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 02:08:53.092 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 02:08:53.092 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 02:08:53.092 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 02:08:53.092 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 02:08:53.092 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 512
+2022-04-20 02:08:53.093 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 02:08:53.093 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 02:08:53.093 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 02:08:53.093 | INFO     | utils.hyperParams:print_arguments:7 - num_epochs: 3
+2022-04-20 02:08:53.093 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 02:08:53.093 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 02:08:53.093 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 02:08:53.094 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 02:08:53.094 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 02:08:53.094 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 02:08:53.094 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 02:08:54.415 | INFO     | __main__:train:66 - 
+
+2022-04-20 02:08:54.415 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 02:08:54.415 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 02:08:54.415 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 02:08:54.415 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 02:08:54.416 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 02:08:54.416 | INFO     | __main__:train:74 - 
+
+2022-04-20 02:08:54.417 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:08:56.520 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 02:09:12.577 | INFO     | __main__:train:101 - epoch:  0, step:   50, loss: 0.1686
+2022-04-20 02:09:28.454 | INFO     | __main__:train:101 - epoch:  0, step:  100, loss: 0.1296
+2022-04-20 02:09:48.148 | INFO     | __main__:train:104 - epoch:  0, valid_loss:    0, valid_acc: 87.0000
+2022-04-20 02:09:48.149 | INFO     | __main__:train:105 - best_result:    0
+2022-04-20 02:09:48.882 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:09:48.883 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:09:49.210 | INFO     | __main__:train:101 - epoch:  1, step:    0, loss: 0.1971
+2022-04-20 02:10:05.183 | INFO     | __main__:train:101 - epoch:  1, step:   50, loss: 0.3988
+2022-04-20 02:10:21.208 | INFO     | __main__:train:101 - epoch:  1, step:  100, loss: 0.2529
+2022-04-20 02:10:41.046 | INFO     | __main__:train:104 - epoch:  1, valid_loss:    0, valid_acc: 92.2000
+2022-04-20 02:10:41.046 | INFO     | __main__:train:105 - best_result:    0
+2022-04-20 02:10:41.637 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:10:41.638 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:10:41.967 | INFO     | __main__:train:101 - epoch:  2, step:    0, loss: 0.0070
+2022-04-20 02:10:58.041 | INFO     | __main__:train:101 - epoch:  2, step:   50, loss: 0.8152
+2022-04-20 02:11:14.130 | INFO     | __main__:train:101 - epoch:  2, step:  100, loss: 0.0331
+2022-04-20 02:11:34.027 | INFO     | __main__:train:104 - epoch:  2, valid_loss:    0, valid_acc: 92.5000
+2022-04-20 02:11:34.027 | INFO     | __main__:train:105 - best_result:    0
+2022-04-20 02:11:34.607 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:20:08.556 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 02:20:08.557 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 02:20:08.557 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 02:20:08.557 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 02:20:08.557 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 02:20:08.558 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 02:20:08.558 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 02:20:08.558 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 02:20:08.558 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 02:20:08.558 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 512
+2022-04-20 02:20:08.558 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 02:20:08.558 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 02:20:08.559 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 02:20:08.559 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 02:20:08.559 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 02:20:08.559 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 02:20:08.559 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 02:20:08.559 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 02:20:08.559 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 5
+2022-04-20 02:20:08.559 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 02:20:08.560 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 02:20:08.560 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 02:20:09.909 | INFO     | __main__:train:66 - 
+
+2022-04-20 02:20:09.909 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 02:20:09.910 | INFO     | __main__:train:68 -   Num Epochs = 5
+2022-04-20 02:20:09.910 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 02:20:09.910 | INFO     | __main__:train:71 -   Total optimization steps = 625
+2022-04-20 02:20:09.910 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 02:20:09.910 | INFO     | __main__:train:74 - 
+
+2022-04-20 02:20:09.911 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:20:11.956 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 02:20:27.874 | INFO     | __main__:train:101 - epoch:  0, step:   50, loss: 0.1725
+2022-04-20 02:20:43.791 | INFO     | __main__:train:101 - epoch:  0, step:  100, loss: 0.0844
+2022-04-20 02:21:03.562 | INFO     | __main__:train:104 - epoch:  0, valid_loss:    0, valid_acc: 90.7000
+2022-04-20 02:21:04.146 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:21:04.146 | INFO     | __main__:train:108 - best_result:    0
+2022-04-20 02:21:04.147 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:21:04.470 | INFO     | __main__:train:101 - epoch:  1, step:    0, loss: 0.1597
+2022-04-20 02:21:20.534 | INFO     | __main__:train:101 - epoch:  1, step:   50, loss: 0.3878
+2022-04-20 02:21:36.650 | INFO     | __main__:train:101 - epoch:  1, step:  100, loss: 0.3880
+2022-04-20 02:21:56.501 | INFO     | __main__:train:104 - epoch:  1, valid_loss:    0, valid_acc: 91.7000
+2022-04-20 02:21:57.085 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:21:57.085 | INFO     | __main__:train:108 - best_result:    0
+2022-04-20 02:21:57.086 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:21:57.412 | INFO     | __main__:train:101 - epoch:  2, step:    0, loss: 0.0123
+2022-04-20 02:22:13.498 | INFO     | __main__:train:101 - epoch:  2, step:   50, loss: 0.7048
+2022-04-20 02:22:29.585 | INFO     | __main__:train:101 - epoch:  2, step:  100, loss: 0.0304
+2022-04-20 02:22:49.613 | INFO     | __main__:train:104 - epoch:  2, valid_loss:    0, valid_acc: 90.9000
+2022-04-20 02:22:49.614 | INFO     | __main__:train:108 - best_result:    0
+2022-04-20 02:22:49.615 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:22:49.945 | INFO     | __main__:train:101 - epoch:  3, step:    0, loss: 0.0065
+2022-04-20 02:23:06.315 | INFO     | __main__:train:101 - epoch:  3, step:   50, loss: 0.0047
+2022-04-20 02:23:16.904 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 02:23:16.904 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 02:23:16.904 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 02:23:16.905 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 02:23:16.905 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 02:23:16.905 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 02:23:16.905 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 02:23:16.905 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 02:23:16.905 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 02:23:16.906 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 512
+2022-04-20 02:23:16.906 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 02:23:16.906 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 02:23:16.906 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 02:23:16.906 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 02:23:16.906 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 02:23:16.906 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 02:23:16.907 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 02:23:16.907 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 02:23:16.907 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 02:23:16.907 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 02:23:16.907 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 02:23:16.907 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 02:23:18.193 | INFO     | __main__:train:66 - 
+
+2022-04-20 02:23:18.193 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 02:23:18.193 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 02:23:18.193 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 02:23:18.193 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 02:23:18.193 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 02:23:18.194 | INFO     | __main__:train:74 - 
+
+2022-04-20 02:23:18.195 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:23:20.198 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 02:23:36.372 | INFO     | __main__:train:101 - epoch:  0, step:   50, loss: 0.1686
+2022-04-20 02:23:52.585 | INFO     | __main__:train:101 - epoch:  0, step:  100, loss: 0.1296
+2022-04-20 02:24:12.540 | INFO     | __main__:train:104 - epoch:  0, valid_loss:    0, valid_acc: 87.0000
+2022-04-20 02:24:13.123 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:24:13.123 | INFO     | __main__:train:108 - best_result:    0
+2022-04-20 02:24:13.124 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:24:13.451 | INFO     | __main__:train:101 - epoch:  1, step:    0, loss: 0.1971
+2022-04-20 02:24:29.599 | INFO     | __main__:train:101 - epoch:  1, step:   50, loss: 0.3988
+2022-04-20 02:24:45.825 | INFO     | __main__:train:101 - epoch:  1, step:  100, loss: 0.2529
+2022-04-20 02:25:05.924 | INFO     | __main__:train:104 - epoch:  1, valid_loss:    0, valid_acc: 92.2000
+2022-04-20 02:25:06.509 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:25:06.509 | INFO     | __main__:train:108 - best_result:    0
+2022-04-20 02:25:06.510 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:25:06.839 | INFO     | __main__:train:101 - epoch:  2, step:    0, loss: 0.0070
+2022-04-20 02:25:26.322 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 02:25:26.322 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 02:25:26.322 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 02:25:26.322 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 02:25:26.323 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 02:25:26.323 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 02:25:26.323 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 02:25:26.323 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 02:25:26.323 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 02:25:26.323 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 512
+2022-04-20 02:25:26.323 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 02:25:26.324 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 02:25:26.324 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 02:25:26.324 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 02:25:26.325 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 02:25:26.325 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 02:25:26.325 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 02:25:26.325 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 02:25:26.325 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 02:25:26.326 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 02:25:26.326 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 02:25:26.326 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 02:25:27.637 | INFO     | __main__:train:66 - 
+
+2022-04-20 02:25:27.637 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 02:25:27.637 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 02:25:27.637 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 02:25:27.637 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 02:25:27.638 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 02:25:27.638 | INFO     | __main__:train:74 - 
+
+2022-04-20 02:25:27.639 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:25:29.670 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 02:25:46.764 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 02:25:46.765 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 02:25:46.765 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 02:25:46.765 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 02:25:46.765 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 02:25:46.765 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 02:25:46.765 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 02:25:46.766 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 02:25:46.766 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 02:25:46.766 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 512
+2022-04-20 02:25:46.766 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 02:25:46.766 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 02:25:46.766 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 02:25:46.766 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 02:25:46.767 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 02:25:46.767 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 02:25:46.767 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 02:25:46.767 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 02:25:46.767 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 02:25:46.767 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 02:25:46.767 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 02:25:46.768 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 02:25:48.043 | INFO     | __main__:train:66 - 
+
+2022-04-20 02:25:48.043 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 02:25:48.044 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 02:25:48.044 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 02:25:48.044 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 02:25:48.044 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 02:25:48.044 | INFO     | __main__:train:74 - 
+
+2022-04-20 02:25:48.045 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:25:50.037 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 02:26:06.457 | INFO     | __main__:train:101 - epoch:  0, step:   50, loss: 0.1686
+2022-04-20 02:26:22.622 | INFO     | __main__:train:101 - epoch:  0, step:  100, loss: 0.1296
+2022-04-20 02:26:42.608 | INFO     | __main__:train:104 - epoch:  0, valid_loss: 40.474481, valid_acc: 87.0000
+2022-04-20 02:26:43.220 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:26:43.220 | INFO     | __main__:train:108 - best_result:    0
+2022-04-20 02:26:43.221 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:26:43.548 | INFO     | __main__:train:101 - epoch:  1, step:    0, loss: 0.1971
+2022-04-20 02:26:59.732 | INFO     | __main__:train:101 - epoch:  1, step:   50, loss: 0.3988
+2022-04-20 02:27:15.947 | INFO     | __main__:train:101 - epoch:  1, step:  100, loss: 0.2529
+2022-04-20 02:27:35.995 | INFO     | __main__:train:104 - epoch:  1, valid_loss: 29.620137, valid_acc: 92.2000
+2022-04-20 02:27:36.589 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:27:36.589 | INFO     | __main__:train:108 - best_result:    0
+2022-04-20 02:27:36.590 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:27:36.918 | INFO     | __main__:train:101 - epoch:  2, step:    0, loss: 0.0070
+2022-04-20 02:27:53.235 | INFO     | __main__:train:101 - epoch:  2, step:   50, loss: 0.8152
+2022-04-20 02:28:00.679 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 02:28:00.680 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 02:28:00.680 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 02:28:00.680 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 02:28:00.680 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 02:28:00.680 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 02:28:00.681 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 02:28:00.681 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 02:28:00.681 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 02:28:00.681 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 512
+2022-04-20 02:28:00.681 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 02:28:00.681 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 02:28:00.681 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 02:28:00.682 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 02:28:00.682 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 02:28:00.682 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 02:28:00.682 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 02:28:00.682 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 02:28:00.682 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 02:28:00.682 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 02:28:00.683 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 02:28:00.683 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 02:28:01.962 | INFO     | __main__:train:66 - 
+
+2022-04-20 02:28:01.962 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 02:28:01.962 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 02:28:01.962 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 02:28:01.963 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 02:28:01.963 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 02:28:01.963 | INFO     | __main__:train:74 - 
+
+2022-04-20 02:28:01.964 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:28:03.949 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 02:28:20.154 | INFO     | __main__:train:101 - epoch:  0, step:   50, loss: 0.1686
+2022-04-20 02:28:36.361 | INFO     | __main__:train:101 - epoch:  0, step:  100, loss: 0.1296
+2022-04-20 02:28:56.411 | INFO     | __main__:train:104 - epoch:  0, valid_loss: 40.474481, valid_acc: 87.0000
+2022-04-20 02:28:57.019 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:28:57.019 | INFO     | __main__:train:109 - best_result:    0
+2022-04-20 02:28:57.020 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:28:57.349 | INFO     | __main__:train:101 - epoch:  1, step:    0, loss: 0.1971
+2022-04-20 02:29:13.559 | INFO     | __main__:train:101 - epoch:  1, step:   50, loss: 0.3988
+2022-04-20 02:29:29.791 | INFO     | __main__:train:101 - epoch:  1, step:  100, loss: 0.2529
+2022-04-20 02:29:49.859 | INFO     | __main__:train:104 - epoch:  1, valid_loss: 29.620137, valid_acc: 92.2000
+2022-04-20 02:29:50.444 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:29:50.444 | INFO     | __main__:train:109 - best_result:    0
+2022-04-20 02:29:50.445 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:29:50.774 | INFO     | __main__:train:101 - epoch:  2, step:    0, loss: 0.0070
+2022-04-20 02:30:07.004 | INFO     | __main__:train:101 - epoch:  2, step:   50, loss: 0.8152
+2022-04-20 02:30:23.233 | INFO     | __main__:train:101 - epoch:  2, step:  100, loss: 0.0331
+2022-04-20 02:30:43.361 | INFO     | __main__:train:104 - epoch:  2, valid_loss: 26.682799, valid_acc: 92.5000
+2022-04-20 02:30:43.949 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:30:43.949 | INFO     | __main__:train:109 - best_result:    0
+2022-04-20 02:30:55.344 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 02:30:55.345 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 02:30:55.345 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 02:30:55.345 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 02:30:55.345 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 02:30:55.346 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 02:30:55.346 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 02:30:55.346 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 02:30:55.346 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 02:30:55.346 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 512
+2022-04-20 02:30:55.346 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 02:30:55.346 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 02:30:55.347 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 02:30:55.347 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 02:30:55.347 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 02:30:55.347 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 02:30:55.347 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 02:30:55.347 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 02:30:55.347 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 02:30:55.348 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 02:30:55.348 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 02:30:55.348 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 02:30:56.700 | INFO     | __main__:train:66 - 
+
+2022-04-20 02:30:56.700 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 02:30:56.700 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 02:30:56.700 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 02:30:56.700 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 02:30:56.701 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 02:30:56.701 | INFO     | __main__:train:74 - 
+
+2022-04-20 02:30:56.702 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:30:58.693 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 02:31:07.794 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 02:31:07.794 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 02:31:07.794 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 02:31:07.794 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 02:31:07.795 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 02:31:07.795 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 02:31:07.795 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 02:31:07.795 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 02:31:07.795 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 02:31:07.795 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 512
+2022-04-20 02:31:07.795 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 02:31:07.796 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 02:31:07.796 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 02:31:07.796 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 02:31:07.796 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 02:31:07.796 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 02:31:07.796 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 02:31:07.796 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 02:31:07.797 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 02:31:07.797 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 02:31:07.797 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 02:31:07.797 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 02:31:09.134 | INFO     | __main__:train:66 - 
+
+2022-04-20 02:31:09.134 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 02:31:09.135 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 02:31:09.135 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 02:31:09.135 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 02:31:09.135 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 02:31:09.135 | INFO     | __main__:train:74 - 
+
+2022-04-20 02:31:09.136 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:31:11.186 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 02:31:27.359 | INFO     | __main__:train:101 - epoch:  0, step:   50, loss: 0.1686
+2022-04-20 02:31:43.547 | INFO     | __main__:train:101 - epoch:  0, step:  100, loss: 0.1296
+2022-04-20 02:32:03.583 | INFO     | __main__:train:104 - epoch:  0, valid_loss: 40.474481, valid_acc: 87.0000
+2022-04-20 02:32:04.173 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:32:04.173 | INFO     | __main__:train:109 - best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700
+2022-04-20 02:32:04.177 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:32:04.506 | INFO     | __main__:train:101 - epoch:  1, step:    0, loss: 0.1971
+2022-04-20 02:32:20.703 | INFO     | __main__:train:101 - epoch:  1, step:   50, loss: 0.3988
+2022-04-20 02:32:36.978 | INFO     | __main__:train:101 - epoch:  1, step:  100, loss: 0.2529
+2022-04-20 02:32:57.272 | INFO     | __main__:train:104 - epoch:  1, valid_loss: 29.620137, valid_acc: 92.2000
+2022-04-20 02:32:57.879 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:32:57.879 | INFO     | __main__:train:109 - best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220
+2022-04-20 02:32:57.880 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:32:58.216 | INFO     | __main__:train:101 - epoch:  2, step:    0, loss: 0.0070
+2022-04-20 02:33:08.617 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 02:33:08.617 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 02:33:08.618 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 02:33:08.618 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 02:33:08.618 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 02:33:08.618 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 02:33:08.618 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 02:33:08.618 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 02:33:08.618 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 02:33:08.619 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 512
+2022-04-20 02:33:08.619 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 02:33:08.621 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 02:33:08.621 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 02:33:08.621 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 02:33:08.621 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 02:33:08.621 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 02:33:08.622 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 02:33:08.622 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 02:33:08.622 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 02:33:08.622 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 02:33:08.622 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 02:33:08.622 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 02:33:09.952 | INFO     | __main__:train:66 - 
+
+2022-04-20 02:33:09.952 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 02:33:09.952 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 02:33:09.953 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 02:33:09.953 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 02:33:09.953 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 02:33:09.953 | INFO     | __main__:train:74 - 
+
+2022-04-20 02:33:09.954 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:33:12.001 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 02:33:28.292 | INFO     | __main__:train:101 - epoch:  0, step:   50, loss: 0.1686
+2022-04-20 02:33:44.495 | INFO     | __main__:train:101 - epoch:  0, step:  100, loss: 0.1296
+2022-04-20 02:34:04.558 | INFO     | __main__:train:104 - epoch:  0, valid_loss: 40.474481, valid_acc: 87.0000
+2022-04-20 02:34:05.145 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:34:05.145 | INFO     | __main__:train:108 - best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700best_result: 0.8700
+2022-04-20 02:34:05.147 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:34:05.475 | INFO     | __main__:train:101 - epoch:  1, step:    0, loss: 0.1971
+2022-04-20 02:34:21.677 | INFO     | __main__:train:101 - epoch:  1, step:   50, loss: 0.3988
+2022-04-20 02:34:37.985 | INFO     | __main__:train:101 - epoch:  1, step:  100, loss: 0.2529
+2022-04-20 02:34:58.132 | INFO     | __main__:train:104 - epoch:  1, valid_loss: 29.620137, valid_acc: 92.2000
+2022-04-20 02:34:58.729 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:34:58.730 | INFO     | __main__:train:108 - best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220best_result: 0.9220
+2022-04-20 02:34:58.731 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:34:59.058 | INFO     | __main__:train:101 - epoch:  2, step:    0, loss: 0.0070
+2022-04-20 02:35:15.395 | INFO     | __main__:train:101 - epoch:  2, step:   50, loss: 0.8152
+2022-04-20 02:35:18.893 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 02:35:18.893 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 02:35:18.893 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 02:35:18.893 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 02:35:18.894 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 02:35:18.894 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 02:35:18.894 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 02:35:18.894 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 02:35:18.894 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 512
+2022-04-20 02:35:18.894 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 512
+2022-04-20 02:35:18.894 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 02:35:18.894 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 02:35:18.895 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 02:35:18.895 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 02:35:18.895 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 02:35:18.895 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 02:35:18.895 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 02:35:18.895 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 02:35:18.895 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 02:35:18.896 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 02:35:18.896 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 02:35:18.896 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 02:35:20.210 | INFO     | __main__:train:66 - 
+
+2022-04-20 02:35:20.210 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 02:35:20.211 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 02:35:20.211 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 02:35:20.211 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 02:35:20.211 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 02:35:20.211 | INFO     | __main__:train:74 - 
+
+2022-04-20 02:35:20.212 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:35:22.427 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 02:35:38.823 | INFO     | __main__:train:101 - epoch:  0, step:   50, loss: 0.1686
+2022-04-20 02:35:55.280 | INFO     | __main__:train:101 - epoch:  0, step:  100, loss: 0.1296
+2022-04-20 02:36:15.365 | INFO     | __main__:train:104 - epoch:  0, valid_loss: 40.474481, valid_acc: 87.0000
+2022-04-20 02:36:15.959 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 02:36:15.959 | INFO     | __main__:train:109 - best_result: 87.0000
+2022-04-20 02:36:15.960 | INFO     | __main__:train:82 - 
+
+2022-04-20 02:36:16.289 | INFO     | __main__:train:101 - epoch:  1, step:    0, loss: 0.1971
+2022-04-20 13:58:08.379 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 13:58:08.380 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 13:58:08.381 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 13:58:08.381 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 13:58:08.381 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 13:58:08.381 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 13:58:08.381 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 13:58:08.381 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 13:58:08.382 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 256
+2022-04-20 13:58:08.382 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 768
+2022-04-20 13:58:08.382 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 13:58:08.382 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 13:58:08.382 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 13:58:08.382 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 13:58:08.382 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 13:58:08.383 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 13:58:08.383 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 13:58:08.383 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 13:58:08.383 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 13:58:08.383 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 13:58:08.383 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 13:58:08.384 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 13:59:34.062 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 13:59:34.062 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 13:59:34.063 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 13:59:34.063 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 13:59:34.063 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 13:59:34.063 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 13:59:34.063 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 13:59:34.063 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 13:59:34.063 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 256
+2022-04-20 13:59:34.064 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 768
+2022-04-20 13:59:34.064 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 13:59:34.064 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 13:59:34.064 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 13:59:34.064 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 13:59:34.064 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 13:59:34.064 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 13:59:34.065 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 13:59:34.065 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 13:59:34.065 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 13:59:34.065 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 13:59:34.065 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 13:59:34.065 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 13:59:56.317 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 13:59:56.317 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 13:59:56.317 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 13:59:56.318 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 13:59:56.318 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 13:59:56.318 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 13:59:56.318 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 13:59:56.318 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 13:59:56.318 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 256
+2022-04-20 13:59:56.318 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 768
+2022-04-20 13:59:56.319 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 13:59:56.319 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 13:59:56.319 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 13:59:56.319 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 13:59:56.319 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 13:59:56.319 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 13:59:56.319 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 13:59:56.320 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 13:59:56.320 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 13:59:56.320 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 13:59:56.320 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 13:59:56.320 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 13:59:57.726 | INFO     | __main__:train:66 - 
+
+2022-04-20 13:59:57.726 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 13:59:57.726 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 13:59:57.726 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 13:59:57.726 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 13:59:57.726 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 13:59:57.727 | INFO     | __main__:train:74 - 
+
+2022-04-20 13:59:57.727 | INFO     | __main__:train:82 - 
+
+2022-04-20 14:00:00.020 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 14:00:16.169 | INFO     | __main__:train:101 - epoch:  0, step:   50, loss: 0.1686
+2022-04-20 14:00:32.054 | INFO     | __main__:train:101 - epoch:  0, step:  100, loss: 0.1296
+2022-04-20 14:00:51.756 | INFO     | __main__:train:104 - epoch:  0, valid_loss: 40.474481, valid_acc: 87.0000
+2022-04-20 14:00:52.492 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 14:00:52.492 | INFO     | __main__:train:109 - best_result: 87.0000
+2022-04-20 14:00:52.493 | INFO     | __main__:train:82 - 
+
+2022-04-20 14:00:52.814 | INFO     | __main__:train:101 - epoch:  1, step:    0, loss: 0.1971
+2022-04-20 14:01:08.805 | INFO     | __main__:train:101 - epoch:  1, step:   50, loss: 0.3988
+2022-04-20 14:01:24.851 | INFO     | __main__:train:101 - epoch:  1, step:  100, loss: 0.2529
+2022-04-20 14:01:46.306 | INFO     | __main__:train:104 - epoch:  1, valid_loss: 29.620137, valid_acc: 92.2000
+2022-04-20 14:01:47.001 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 14:01:47.001 | INFO     | __main__:train:109 - best_result: 92.2000
+2022-04-20 14:01:47.002 | INFO     | __main__:train:82 - 
+
+2022-04-20 14:01:47.328 | INFO     | __main__:train:101 - epoch:  2, step:    0, loss: 0.0070
+2022-04-20 14:02:03.861 | INFO     | __main__:train:101 - epoch:  2, step:   50, loss: 0.8152
+2022-04-20 14:02:20.078 | INFO     | __main__:train:101 - epoch:  2, step:  100, loss: 0.0331
+2022-04-20 14:02:40.296 | INFO     | __main__:train:104 - epoch:  2, valid_loss: 26.682799, valid_acc: 92.5000
+2022-04-20 14:02:40.919 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 14:02:40.919 | INFO     | __main__:train:109 - best_result: 92.5000
+2022-04-20 14:05:26.414 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 14:05:26.414 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 14:05:26.415 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 14:05:26.415 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 14:05:26.415 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 14:05:26.415 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 14:05:26.415 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 14:05:26.415 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 14:05:26.415 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 256
+2022-04-20 14:05:26.416 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 768
+2022-04-20 14:05:26.416 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 14:05:26.416 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 14:05:26.416 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 14:05:26.416 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 14:05:26.416 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 14:05:26.416 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 14:05:26.417 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 14:05:26.417 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 14:05:26.417 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 14:05:26.417 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 14:05:26.417 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 14:05:26.417 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 14:05:27.734 | INFO     | __main__:train:66 - 
+
+2022-04-20 14:05:27.734 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 14:05:27.735 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 14:05:27.735 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 14:05:27.735 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 14:05:27.735 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 14:05:27.735 | INFO     | __main__:train:74 - 
+
+2022-04-20 14:05:27.736 | INFO     | __main__:train:82 - 
+
+2022-04-20 14:05:29.712 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 14:05:45.660 | INFO     | __main__:train:101 - epoch:  0, step:   50, loss: 0.1686
+2022-04-20 14:06:01.687 | INFO     | __main__:train:101 - epoch:  0, step:  100, loss: 0.1296
+2022-04-20 14:06:21.483 | INFO     | __main__:train:104 - epoch:  0, valid_loss: 40.474481, valid_acc: 87.0000
+2022-04-20 14:06:22.188 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 14:06:22.189 | INFO     | __main__:train:109 - best_result: 87.0000
+2022-04-20 14:06:22.190 | INFO     | __main__:train:82 - 
+
+2022-04-20 14:06:22.512 | INFO     | __main__:train:101 - epoch:  1, step:    0, loss: 0.1971
+2022-04-20 14:06:38.611 | INFO     | __main__:train:101 - epoch:  1, step:   50, loss: 0.3988
+2022-04-20 14:06:54.781 | INFO     | __main__:train:101 - epoch:  1, step:  100, loss: 0.2529
+2022-04-20 14:07:14.722 | INFO     | __main__:train:104 - epoch:  1, valid_loss: 29.620137, valid_acc: 92.2000
+2022-04-20 14:07:15.343 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 14:07:15.344 | INFO     | __main__:train:109 - best_result: 92.2000
+2022-04-20 14:07:15.345 | INFO     | __main__:train:82 - 
+
+2022-04-20 14:07:15.690 | INFO     | __main__:train:101 - epoch:  2, step:    0, loss: 0.0070
+2022-04-20 14:07:31.991 | INFO     | __main__:train:101 - epoch:  2, step:   50, loss: 0.8152
+2022-04-20 14:07:48.421 | INFO     | __main__:train:101 - epoch:  2, step:  100, loss: 0.0331
+2022-04-20 14:08:08.566 | INFO     | __main__:train:104 - epoch:  2, valid_loss: 26.682799, valid_acc: 92.5000
+2022-04-20 14:08:09.152 | INFO     | utils.tools:save_model:98 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 14:08:09.152 | INFO     | __main__:train:109 - best_result: 92.5000
+2022-04-20 14:12:01.880 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 14:12:01.880 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 14:12:01.880 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 14:12:01.881 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 14:12:01.881 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 14:12:01.881 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 14:12:01.881 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 14:12:01.881 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 14:12:01.881 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 256
+2022-04-20 14:12:01.881 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 768
+2022-04-20 14:12:01.882 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 14:12:01.882 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 14:12:01.882 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 14:12:01.882 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 14:12:01.882 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 14:12:01.882 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 14:12:01.882 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 14:12:01.883 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 14:12:01.883 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 14:12:01.883 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 14:12:01.883 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 14:12:01.883 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 14:12:03.182 | INFO     | __main__:train:66 - 
+
+2022-04-20 14:12:03.182 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 14:12:03.182 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 14:12:03.182 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 14:12:03.183 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 14:12:03.183 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 14:12:03.183 | INFO     | __main__:train:74 - 
+
+2022-04-20 14:12:03.184 | INFO     | __main__:train:82 - 
+
+2022-04-20 14:12:05.067 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 14:12:20.947 | INFO     | __main__:train:101 - epoch:  0, step:   50, loss: 0.1686
+2022-04-20 14:12:36.883 | INFO     | __main__:train:101 - epoch:  0, step:  100, loss: 0.1296
+2022-04-20 14:12:56.643 | INFO     | __main__:train:104 - epoch:  0, valid_loss: 40.474481, valid_acc: 87.0000
+2022-04-20 14:12:56.644 | INFO     | __main__:train:109 - best_result: 92.5000
+2022-04-20 14:12:56.645 | INFO     | __main__:train:82 - 
+
+2022-04-20 14:12:56.968 | INFO     | __main__:train:101 - epoch:  1, step:    0, loss: 0.1971
+2022-04-20 14:13:12.981 | INFO     | __main__:train:101 - epoch:  1, step:   50, loss: 0.3988
+2022-04-20 14:13:29.045 | INFO     | __main__:train:101 - epoch:  1, step:  100, loss: 0.2529
+2022-04-20 14:13:48.931 | INFO     | __main__:train:104 - epoch:  1, valid_loss: 29.620137, valid_acc: 92.2000
+2022-04-20 14:13:48.931 | INFO     | __main__:train:109 - best_result: 92.5000
+2022-04-20 14:13:48.932 | INFO     | __main__:train:82 - 
+
+2022-04-20 14:13:49.260 | INFO     | __main__:train:101 - epoch:  2, step:    0, loss: 0.0070
+2022-04-20 14:14:05.379 | INFO     | __main__:train:101 - epoch:  2, step:   50, loss: 0.8152
+2022-04-20 14:14:21.494 | INFO     | __main__:train:101 - epoch:  2, step:  100, loss: 0.0331
+2022-04-20 14:14:41.458 | INFO     | __main__:train:104 - epoch:  2, valid_loss: 26.682799, valid_acc: 92.5000
+2022-04-20 14:14:41.459 | INFO     | __main__:train:109 - best_result: 92.5000
+2022-04-20 14:31:44.520 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 14:31:44.521 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 14:31:44.521 | INFO     | utils.hyperParams:print_arguments:7 - alpha: 0.6
+2022-04-20 14:31:44.521 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 14:31:44.521 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 14:31:44.521 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 14:31:44.521 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 14:31:44.522 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 14:31:44.522 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 14:31:44.522 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 256
+2022-04-20 14:31:44.522 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 768
+2022-04-20 14:31:44.522 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 14:31:44.523 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 14:31:44.523 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 14:31:44.523 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 14:31:44.523 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 14:31:44.523 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 14:31:44.523 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 14:31:44.523 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 14:31:44.523 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 14:31:44.524 | INFO     | utils.hyperParams:print_arguments:7 - temperature: 9
+2022-04-20 14:31:44.524 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 14:31:44.524 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 14:31:44.524 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 14:31:45.813 | INFO     | __main__:train:66 - 
+
+2022-04-20 14:31:45.813 | INFO     | __main__:train:67 - ***** Running training *****
+2022-04-20 14:31:45.814 | INFO     | __main__:train:68 -   Num Epochs = 3
+2022-04-20 14:31:45.814 | INFO     | __main__:train:70 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 14:31:45.814 | INFO     | __main__:train:71 -   Total optimization steps = 375
+2022-04-20 14:31:45.814 | INFO     | __main__:train:73 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 14:31:45.814 | INFO     | __main__:train:74 - 
+
+2022-04-20 14:31:45.815 | INFO     | __main__:train:82 - 
+
+2022-04-20 14:31:47.703 | INFO     | __main__:train:101 - epoch:  0, step:    0, loss: 0.7662
+2022-04-20 14:32:03.704 | INFO     | __main__:train:101 - epoch:  0, step:   50, loss: 0.1686
+2022-04-20 14:32:19.610 | INFO     | __main__:train:101 - epoch:  0, step:  100, loss: 0.1296
+2022-04-20 14:32:39.350 | INFO     | __main__:train:104 - epoch:  0, valid_loss: 40.474481, valid_acc: 87.0000
+2022-04-20 14:32:39.947 | INFO     | utils.tools:save_model:102 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 14:32:39.947 | INFO     | __main__:train:109 - best_result: 87.0000
+2022-04-20 14:32:39.948 | INFO     | __main__:train:82 - 
+
+2022-04-20 14:32:40.270 | INFO     | __main__:train:101 - epoch:  1, step:    0, loss: 0.1971
+2022-04-20 14:32:56.273 | INFO     | __main__:train:101 - epoch:  1, step:   50, loss: 0.3988
+2022-04-20 14:33:12.320 | INFO     | __main__:train:101 - epoch:  1, step:  100, loss: 0.2529
+2022-04-20 14:33:32.197 | INFO     | __main__:train:104 - epoch:  1, valid_loss: 29.620137, valid_acc: 92.2000
+2022-04-20 14:33:32.789 | INFO     | utils.tools:save_model:102 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 14:33:32.789 | INFO     | __main__:train:109 - best_result: 92.2000
+2022-04-20 14:33:32.790 | INFO     | __main__:train:82 - 
+
+2022-04-20 14:33:33.116 | INFO     | __main__:train:101 - epoch:  2, step:    0, loss: 0.0070
+2022-04-20 14:33:49.216 | INFO     | __main__:train:101 - epoch:  2, step:   50, loss: 0.8152
+2022-04-20 14:34:05.329 | INFO     | __main__:train:101 - epoch:  2, step:  100, loss: 0.0331
+2022-04-20 14:34:25.250 | INFO     | __main__:train:104 - epoch:  2, valid_loss: 26.682799, valid_acc: 92.5000
+2022-04-20 14:34:25.830 | INFO     | utils.tools:save_model:102 - Saved model to ./checkpoints/teacher_model.pth
+2022-04-20 14:34:25.830 | INFO     | __main__:train:109 - best_result: 92.5000
+2022-04-20 15:36:01.204 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 15:36:01.205 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 15:36:01.205 | INFO     | utils.hyperParams:print_arguments:7 - alpha: 0.6
+2022-04-20 15:36:01.205 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 15:36:01.205 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 15:36:01.205 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 15:36:01.206 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 15:36:01.206 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 15:36:01.206 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 15:36:01.206 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 256
+2022-04-20 15:36:01.206 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 768
+2022-04-20 15:36:01.206 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 15:36:01.206 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 15:36:01.207 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 15:36:01.207 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 15:36:01.207 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 15:36:01.207 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 15:36:01.207 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 15:36:01.207 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 15:36:01.207 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 15:36:01.208 | INFO     | utils.hyperParams:print_arguments:7 - temperature: 9
+2022-04-20 15:36:01.208 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 15:36:01.208 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 15:36:01.208 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 15:36:05.153 | INFO     | __main__:train:46 - Teacher model loaded.
+2022-04-20 15:36:05.156 | INFO     | __main__:train:70 - 
+
+2022-04-20 15:36:05.156 | INFO     | __main__:train:71 - ***** Running training *****
+2022-04-20 15:36:05.157 | INFO     | __main__:train:72 -   Num Epochs = 3
+2022-04-20 15:36:05.157 | INFO     | __main__:train:74 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 15:36:05.157 | INFO     | __main__:train:75 -   Total optimization steps = 375
+2022-04-20 15:36:05.157 | INFO     | __main__:train:77 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 15:36:05.157 | INFO     | __main__:train:78 - 
+
+2022-04-20 15:36:17.426 | INFO     | __main__:train:87 - 
+
+2022-04-20 15:36:17.754 | INFO     | __main__:train:106 - epoch:  0, step:    0, loss: 0.0402
+2022-04-20 15:36:48.033 | INFO     | utils.hyperParams:print_arguments:5 - -----------  Configuration Arguments -----------
+2022-04-20 15:36:48.034 | INFO     | utils.hyperParams:print_arguments:7 - adam_epsilon: 1e-08
+2022-04-20 15:36:48.034 | INFO     | utils.hyperParams:print_arguments:7 - alpha: 0.6
+2022-04-20 15:36:48.034 | INFO     | utils.hyperParams:print_arguments:7 - batch_size: 8
+2022-04-20 15:36:48.034 | INFO     | utils.hyperParams:print_arguments:7 - bert_lr: 2e-05
+2022-04-20 15:36:48.034 | INFO     | utils.hyperParams:print_arguments:7 - bert_path: ./bert-base-chinese
+2022-04-20 15:36:48.035 | INFO     | utils.hyperParams:print_arguments:7 - data_dir: ./data/hotel
+2022-04-20 15:36:48.035 | INFO     | utils.hyperParams:print_arguments:7 - device: cuda
+2022-04-20 15:36:48.035 | INFO     | utils.hyperParams:print_arguments:7 - dropout: 0.1
+2022-04-20 15:36:48.035 | INFO     | utils.hyperParams:print_arguments:7 - embedding_dim: 256
+2022-04-20 15:36:48.035 | INFO     | utils.hyperParams:print_arguments:7 - hidden_dim: 768
+2022-04-20 15:36:48.035 | INFO     | utils.hyperParams:print_arguments:7 - labels: [0, 1]
+2022-04-20 15:36:48.035 | INFO     | utils.hyperParams:print_arguments:7 - max_seq_length: 128
+2022-04-20 15:36:48.036 | INFO     | utils.hyperParams:print_arguments:7 - num_classes: 2
+2022-04-20 15:36:48.036 | INFO     | utils.hyperParams:print_arguments:7 - other_lr: 0.001
+2022-04-20 15:36:48.036 | INFO     | utils.hyperParams:print_arguments:7 - seed: 42
+2022-04-20 15:36:48.036 | INFO     | utils.hyperParams:print_arguments:7 - student_hidden_size: 512
+2022-04-20 15:36:48.036 | INFO     | utils.hyperParams:print_arguments:7 - student_num_epochs: 100
+2022-04-20 15:36:48.036 | INFO     | utils.hyperParams:print_arguments:7 - teacher_hidden_size: 768
+2022-04-20 15:36:48.036 | INFO     | utils.hyperParams:print_arguments:7 - teacher_num_epochs: 3
+2022-04-20 15:36:48.037 | INFO     | utils.hyperParams:print_arguments:7 - temperature: 9
+2022-04-20 15:36:48.037 | INFO     | utils.hyperParams:print_arguments:7 - warmup_proportion: 0.1
+2022-04-20 15:36:48.037 | INFO     | utils.hyperParams:print_arguments:7 - weight_decay: 0.01
+2022-04-20 15:36:48.037 | INFO     | utils.hyperParams:print_arguments:8 - ------------------------------------------------
+2022-04-20 15:36:51.804 | INFO     | __main__:train:46 - Teacher model loaded.
+2022-04-20 15:36:51.808 | INFO     | __main__:train:70 - 
+
+2022-04-20 15:36:51.808 | INFO     | __main__:train:71 - ***** Running training *****
+2022-04-20 15:36:51.808 | INFO     | __main__:train:72 -   Num Epochs = 3
+2022-04-20 15:36:51.808 | INFO     | __main__:train:74 -   Total train batch size (w. parallel, distributed & accumulation) = 8
+2022-04-20 15:36:51.809 | INFO     | __main__:train:75 -   Total optimization steps = 375
+2022-04-20 15:36:51.809 | INFO     | __main__:train:77 -   lr of encoder = 2e-05, lr of task_layer = 0.001
+2022-04-20 15:36:51.809 | INFO     | __main__:train:78 - 
+
+2022-04-20 15:37:04.089 | INFO     | __main__:train:88 - 
+
+2022-04-20 15:37:04.407 | INFO     | __main__:train:107 - epoch:  0, step:    0, loss: 0.0402
+2022-04-20 15:37:20.384 | INFO     | __main__:train:107 - epoch:  0, step:   50, loss: 0.0013
