@@ -24,4 +24,3 @@
 `tempurature`和`alpha`参数会显著影响蒸馏效果<br>
 更多蒸馏`loss`有待更新
 
-# DistillTextClassifier
